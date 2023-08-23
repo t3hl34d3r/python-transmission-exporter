@@ -15,6 +15,8 @@ docker run --rm \
 -p 5000:5000 \
 -e TRANSMISSION_HOST=<your transmission host> \
 -e TRANSMISSION_PORT=<your transmission port (eg. 9091)> \
+-e TRANSMISSION_USERNAME=<your transmission username, optional> \
+-e TRANSMISSION_PASSWORD=<your transmission password, optional> \
 --name=python-transmission-exporter \
 python-transmission-exporter
 ```
