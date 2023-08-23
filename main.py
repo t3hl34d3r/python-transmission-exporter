@@ -15,6 +15,9 @@ except:
     print('TRANSMISSION_PORT env variable not set')
     exit
 
+transmission_user = None
+transmission_pass = None
+
 try:
     transmission_user = os.environ['TRANSMISSION_USERNAME']
     transmission_pass = os.environ['TRANSMISSION_PASSWORD']
