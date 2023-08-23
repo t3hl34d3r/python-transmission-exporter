@@ -21,6 +21,7 @@ docker run --rm \
 python-transmission-exporter
 ```
 
+Metrics should now be available on http://localhost:5000/metrics
 ## Prometheus config
 ```
 - job_name: python-transmission
