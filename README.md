@@ -11,7 +11,12 @@ docker build -t python-transmission-exporter .
 ```
 Run the image:
 ```bash
-docker run --rm -p 5000:5000 -e TRANSMISSION_HOST=<your transmission host> -e TRANSMISSION_PORT=<your transmission port (eg. 9091)> --name=python-transmission-exporter python-transmission-exporter
+docker run --rm \
+-p 5000:5000 \
+-e TRANSMISSION_HOST=<your transmission host> \
+-e TRANSMISSION_PORT=<your transmission port (eg. 9091)> \
+--name=python-transmission-exporter \
+python-transmission-exporter
 ```
 
 ## Prometheus config
