@@ -15,7 +15,16 @@ except:
     print('TRANSMISSION_PORT env variable not set')
     exit
 
-c = Client(host=transmission_host, port=transmission_port)
+try:
+    transmission_user = os.environ['TRANSMISSION_USERNAME']
+    transmission_pass = os.environ['TRANSMISSION_PASSWORD']
+except:
+    print('TRANSMISSION_USERNAME and/or TRANSMISSION_PASSWORD env variable not set defaulting to no authentication')
+
+if transmission_user and transmission_pass:
+    c = Client(host=transmission_host, port=transmission_port, username=transmission_user, password=transmission_pass)
+else:
+    c = Client(host=transmission_host, port=transmission_port)
 
 transmission_torrent_countg = Gauge('transmission_torrent_count', 'Total number of torrents')
 transmission_active_torrent_countg = Gauge('transmission_active_torrent_count', 'Total number of active torrents')
