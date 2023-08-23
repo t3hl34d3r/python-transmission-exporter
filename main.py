@@ -72,7 +72,9 @@ def metrics():
 
 if __name__ == '__main__':
     # Start up the server to expose the metrics.
-    start_http_server(5000)
+    port = 5000
+    start_http_server(port)
+    print(f"Started HTTP server, listening on {port}")
     while True:
-        time.sleep(0.1)
+        time.sleep(1)
         metrics()
