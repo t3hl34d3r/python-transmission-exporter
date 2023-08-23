@@ -3,7 +3,7 @@ Exports metrics from transmission torrent client to be scraped by prometheus.
 ## Docker
 Clone the repository:
 ```bash
-git clone https://github.com/t3hl34d34/python-transmission-exporter.git
+git clone https://github.com/t3hl34d3r/python-transmission-exporter.git && cd python-transmission-exporter
 ```
 Build the image:
 ```bash
