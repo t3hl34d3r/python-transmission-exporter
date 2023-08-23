@@ -1,5 +1,7 @@
 Exports metrics from transmission torrent client to be scraped by prometheus.
 
+![Grafana dashboard preview](https://i.imgur.com/iQt0pzv.png)
+
 ## Docker
 Clone the repository:
 ```bash
@@ -57,3 +59,5 @@ Currently the following metrics are exported
 |transmission_torrent_ratio|Upload/Download ratio|
 |transmission_torrent_available|Availability|
 
+## Grafana
+You can use the the included dashboard.json to import an example grafana dashboard. This dashboard has a constant variable "job" defaulting to "python-transmission". Change this variable if you added this exporter with a different name in prometheus. 
