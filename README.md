@@ -1,7 +1,6 @@
 Exports metrics from transmission torrent client to be scraped by prometheus.
 
 ![Grafana dashboard preview](https://i.imgur.com/iQt0pzv.png)
-
 ## Docker
 Clone the repository:
 ```bash
@@ -25,7 +24,8 @@ python-transmission-exporter
 
 Metrics should now be available on http://localhost:5000/metrics
 ## Prometheus config
-```
+Add this example config to your prometheus.yml to scrape metrics with prometheus:
+```yaml
 - job_name: python-transmission
   metrics_path: /metrics
   static_configs:
